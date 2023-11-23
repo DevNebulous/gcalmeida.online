@@ -9,22 +9,6 @@
 <body>
     <h1>Entre em Contato</h1>
     <p>Aqui está o conteúdo da sua página de contato.</p>
-    <!-- Adicione um formulário de contato, informações de contato, etc. -->
-    <!-- Certifique-se de incluir os links necessários para estilos e scripts. -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    
-    <script>
-        // Esta função remove a extensão .html das URLs
-        document.addEventListener("DOMContentLoaded", function() {
-            var links = document.querySelectorAll('a');
-            links.forEach(function(link) {
-                var href = link.getAttribute('href');
-                if (href && href.endsWith('.html')) {
-                    link.setAttribute('href', href.slice(0, -5)); // Remove os últimos 5 caracteres (.html)
-                }
-            });
-        });
-    </script>
     
 </body>
 </html>
