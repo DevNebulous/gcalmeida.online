@@ -1,25 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
-  <script src="scripts.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-  <h1>My Website</h1>
-  <button onclick="getData()">Get Data from API</button>
-
-  <script>
-    async function getData() {
-      try {
-        const response = await fetch('https://gcalmeida.online/api_bd');
-        const data = await response.json();
-        console.log(data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    }
-  </script>
+    <h1>MainActivity</h1>
 </body>
 </html>
