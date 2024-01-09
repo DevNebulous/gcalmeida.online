@@ -1,0 +1,93 @@
+/* geral */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+    color: #333;
+}
+
+p {
+    color: #70747a;
+}
+
+
+/* nav bar */
+
+.navbar-container {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    /* background-color: #232a31; */
+    padding: 0 2rem;
+}
+
+.div-nav {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.navbar-itens {
+    height: 80px;
+    line-height: 80px;
+    display: inline-block;
+}
+
+.navbar-itens li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.navbar-itens a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.navbar-itens a:hover {
+    color: #ccc;
+    text-shadow: black;
+}
+
+
+.main-banner {
+    margin-left: 30px;
+    padding: 6rem 0;
+}
+
+.main-banner h1,
+.main-banner p {
+    margin-bottom: 8px; /* Define a margem inferior de 10 pixels para os elementos h2, h1 e p dentro da div */
+}
+
+
+.icons-sociais {/* Vertically center the icons */
+}
+
+.icons-sociais li {
+    display: inline-block;
+    margin-top: 10px;   
+}
+
+.icons-sociais a {
+    font-size: 25px;
+    color: black;
+    transition:0.5s; /* Move transition here to apply to font size change */
+}
+
+.icons-sociais a:hover {
+    color: #70747a;
+}
+
+.whats,
+.git {
+    margin-left: 20px;
+}
