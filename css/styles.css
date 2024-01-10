@@ -1,20 +1,30 @@
-/* geral */
+body {
+    --cor-fundo: #f5f5f5; /* Cor de fundo para tema claro */
+    --cor-texto: #333; /* Cor do texto para tema claro */
+}
+
+body.dark-mode {
+    --cor-fundo: #333; /* Cor de fundo para tema escuro */
+    --cor-texto: #f5f5f5; /* Cor do texto para tema escuro */
+}
 
 * {
     margin: 0;
     padding: 0;
-    font-family: Helvetica;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    transition: 0.5s;
+    background-color: var(--cor-fundo);
 }
 
 h1,
 h2,
 h3 {
-    color: #333;
+    color: var(--cor-texto);
 }
 
 p {
-    color: #70747a;
+    color: var(--cor-texto);
 }
 
 
@@ -23,15 +33,25 @@ p {
 .navbar-container {
     width: 100%;
     height: 80px;
-    background-color: white;
-    /* background-color: #232a31; */
+    background-color: transparent;
     padding: 0 2rem;
 }
 
 .div-nav {
     display: flex;
-    gap: 10px;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+.icon-theme{
+    height: 80px;
+    font-size: 20px;
+    line-height: 80px;
+    margin-left: 30px;
+}
+
+
+#theme-icon {
+    color: var(--cor-texto);
 }
 
 .navbar-itens {
@@ -46,15 +66,13 @@ p {
 }
 
 .navbar-itens a {
-    color: black;
+    color: var(--cor-texto);
     text-decoration: none;
     font-weight: bold;
-    transition: 0.5s;
 }
 
 .navbar-itens a:hover {
     color: #ccc;
-    text-shadow: black;
 }
 
 
@@ -68,8 +86,15 @@ p {
     margin-bottom: 8px; /* Define a margem inferior de 10 pixels para os elementos h2, h1 e p dentro da div */
 }
 
+.main-banner p {
+    width: 600px;
+    color: var(--cor-texto);
+    line-height: 1.8;
+}
 
 .icons-sociais {/* Vertically center the icons */
+    transition: 0.5s;
+    margin-top: 10px;
 }
 
 .icons-sociais li {
@@ -79,8 +104,7 @@ p {
 
 .icons-sociais a {
     font-size: 25px;
-    color: black;
-    transition:0.5s; /* Move transition here to apply to font size change */
+    color: var(--cor-texto);
 }
 
 .icons-sociais a:hover {
@@ -90,4 +114,39 @@ p {
 .whats,
 .git {
     margin-left: 20px;
+}
+
+button {    
+    background-color: var(--cor-fundo); /* Green */
+    border: 2px solid var(--cor-texto);
+    color: var(--cor-texto);
+    padding: 10px 25px;
+    margin-top: 7px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\21D3';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
