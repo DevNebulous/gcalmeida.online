@@ -10,34 +10,37 @@
 
 </head>
 <body>
-    <div class="container">
-        <div class="navbar-container">
-            <nav>
-                <div class="div-nav">
-                    <div id="theme-toggle" class="icon-theme">
-                        <a href="#"><i id="theme-icon" class="fas fa-sun"></i></a>
+    <div class="page">
+        <div class="home">
+            <div class="navbar-container">
+                <nav>
+                    <div class="div-nav">
+                        <div id="theme-toggle" class="icon-theme">
+                            <a href="#"><i id="theme-icon" class="fas fa-sun"></i></a>
+                        </div>
+                        <div>
+                            <ul class="navbar-itens">
+                                <li>
+                                    <a href="" class="btn-home" id="btn-home-id">Home</a>
+                                </li>
+                                <li>
+                                    <a href="">Habilidades</a>
+                                </li>
+                                <li>
+                                    <a href="">Projetos</a>
+                                </li>
+                                <li>
+                                    <a href="">Sobre</a>
+                                </li>
+                                <li>
+                                    <a href="">Contato</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div>
-                        <ul class="navbar-itens">
-                            <li>
-                                <a href="">Home</a>
-                            </li>
-                            <li>
-                                <a href="">Sobre</a>
-                            </li>
-                            <li>
-                                <a href="">Habilidades</a>
-                            </li>
-                            <li>
-                                <a href="">Projetos</a>
-                            </li>
-                            <li>
-                                <a href="">Contato</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+                </nav>
+
+            </div>
             <main>
                 <div class="main-banner">
                     <h2>Olá, me chamo Gabriel</h2>
@@ -61,12 +64,39 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
-
             </main>
         </div>
+        <div class="divider">
+            <div class="barra-divider"></div>
+        </div> 
+        <div class="habilidades">
+            <div class="title-habilidades">
+                <h2>Habilidades</h2>
+            </div>
+            <ul>
+                <li><i class="fab fa-java"></i><span class="tooltip">Java</span></li>
+                <li><i class="fab fa-html5"></i><span class="tooltip">HTML5</span></li>
+                <li><i class="fab fa-css3-alt"></i><span class="tooltip">CSS3</span></li>
+                <li><i class="fab fa-js"></i><span class="tooltip">JavaScript</span></li>
+                <li><i class="fab fa-python"></i><span class="tooltip">Python</span></li>
+                <li><i class="fa-solid fa-database"></i><span class="tooltip">SQL</span></li>
+                <li>C#<span class="tooltip">Csharp</span></li>
+                <li>VBA <span class="tooltip">Virtual Basic for Applications</span></li>
+                <li>PBI <span class="tooltip">Power BI</span></li>
+            </ul>
+        </div>
+
+        <div class="divider">
+            <div class="barra-divider"></div>
+        </div> 
+
+        <button id="btn-top" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+        <button id="btn-bottom" onclick="scrollToBottom()"><i class="fa-solid fa-arrow-down"></i></button>
+        
     </div>
+
+
     <script>
         // Seleciona os elementos do DOM
         const themeToggle = document.getElementById('theme-toggle');
@@ -87,10 +117,55 @@
                 themeIcon.classList.add('fa-sun');
             }
         });
-        
+    
+
+        // Seleciona o botão "topo" pelo ID
+        var btnTop = document.getElementById('btn-top');
+        var btnbottom = document.getElementById('btn-bottom');
+        // Adiciona um evento de rolagem à janela
+        window.addEventListener('scroll', function() {
+            // Verifica se a posição vertical de rolagem da janela é maior que 100 pixels (ou seja, se rolou para baixo)
+            if (window.pageYOffset > 100) {
+                // Se rolou para baixo, mostra o botão "topo"
+                btnTop.style.display = 'block';
+                btnbottom.style.display = 'none';
+            } else {
+                // Se está no topo, oculta o botão "topo"
+                btnTop.style.display = 'none';
+                btnbottom.style.display = 'block';
+            }
+        });
+
+        // Função para rolar a página de volta para o topo
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        function scrollToBottom() {
+            window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: 'smooth'
+        }); 
+}
+
+
+        // Encontrar o elemento <a> pelo ID
+        var btnHome = document.getElementById('btn-home-id');
+
+        // Adicionar um ouvinte de evento de clique ao elemento <a>
+        btnHome.addEventListener('click', function(event) {
+            // Impedir o comportamento padrão do link (navegar para outra página)
+            event.preventDefault();
+            // Chamar a função scrollToTop() quando o link for clicado
+            scrollToTop();
+        });
+
+
     </script>
     <style>
-        body {
+body {
     --cor-fundo: #f5f5f5; /* Cor de fundo para tema claro */
     --cor-texto: #333; /* Cor do texto para tema claro */
 }
@@ -108,6 +183,25 @@ body.dark-mode {
     transition: 0.5s;
     background-color: var(--cor-fundo);
 }
+
+#btn-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  transition: 0.5s;
+}
+
+#btn-bottom {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  transition: 0.5s;
+}
+
 
 h1,
 h2,
@@ -138,7 +232,6 @@ p {
     height: 80px;
     font-size: 20px;
     line-height: 80px;
-    margin-left: 30px;
 }
 
 
@@ -242,6 +335,78 @@ button {
     opacity: 1;
     right: 0;
 }
+
+.divider {
+    display: flex;
+    justify-content: center;
+}
+
+.barra-divider {
+    width: 95%;
+    height: 1.5px;
+    margin-bottom: 50px;
+    background-color: var(--cor-texto); /* Cor da linha */
+}
+
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.habilidades li {
+    display: inline-block;
+    color: var(--cor-texto);
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 70px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.habilidades ul {
+    margin-top: 40px;
+}
+
+.habilidades li:hover .tooltip{
+    display: block;
+    font-size: 10px;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
+    padding: 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+    width: 5px; /* Largura da barra de rolagem */
+}
+
+/* Estilizando a área de fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background-color: var(--cor-fundo); /* Cor de fundo da barra de rolagem */
+}
+
+/* Estilizando a alça da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background-color: var(--cor-texto); /* Cor da alça da barra de rolagem */
+}
+
+/* Estilizando as esquinas da barra de rolagem */
+::-webkit-scrollbar-corner {
+    background-color: var(--cor-fundo); /* Cor de fundo das esquinas da barra de rolagem */
+}
+
+
     </style>
 </body>
 </html>
