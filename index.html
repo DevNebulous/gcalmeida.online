@@ -89,7 +89,23 @@
 
         <div class="divider">
             <div class="barra-divider"></div>
-        </div> 
+        </div>
+
+        <div class="projetos">
+            <div class="projects-container">
+                <button id="prevButton">&lt;</button>
+                <div class="project-card previous">
+                    <p>Relatorio BI - NPS</p>
+                </div>
+                <div class="project-card current">
+                    <p>Lab 2</p>
+                </div>
+                <div class="project-card next">
+                    <p>Meu negocio</p>
+                </div>
+                <button id="nextButton">&gt;</button>
+              </div>              
+        </div>
 
         <button id="btn-top" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
         <button id="btn-bottom" onclick="scrollToBottom()"><i class="fa-solid fa-arrow-down"></i></button>
@@ -163,6 +179,36 @@
             scrollToTop();
         });
 
+
+
+        // Seleciona os elementos relevantes
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        // Define o índice do projeto atual
+        let currentIndex = 1; // O índice começa em 1, pois o projeto atual é o segundo (índice 1)
+
+        // Adiciona eventos de clique para as setas de navegação
+        prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            projectCards[currentIndex].classList.remove('current');
+            projectCards[currentIndex].classList.add('next');
+            projectCards[currentIndex - 1].classList.remove('previous');
+            projectCards[currentIndex - 1].classList.add('current');
+            currentIndex--;
+        }
+        });
+
+        nextButton.addEventListener('click', () => {
+        if (currentIndex < projectCards.length - 1) {
+            projectCards[currentIndex].classList.remove('current');
+            projectCards[currentIndex].classList.add('previous');
+            projectCards[currentIndex + 1].classList.remove('next');
+            projectCards[currentIndex + 1].classList.add('current');
+            currentIndex++;
+        }
+        });
 
     </script>
     <style>
@@ -370,13 +416,13 @@ button {
 
 .habilidades li:hover .tooltip{
     display: block;
-    font-size: 10px;
+    font-size: 20px;
 }
 
 .tooltip {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 100px;
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--cor-texto);
@@ -385,6 +431,65 @@ button {
     border-radius: 3px;
     white-space: nowrap;
 }
+
+.projetos {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 10000px; /* Ajuste conforme necessário */
+  margin: 0 auto;
+}
+
+.project-card {
+  width: 300px; /* Ajuste conforme necessário */
+  height: 200px; /* Ajuste conforme necessário */
+  background-color: var(--cor-fundo); /* Cor de fundo dos cards */
+  transform-style: preserve-3d;
+  border: var(--cor-texto) solid 2px;
+  border-radius: 2px;
+  transition: transform 0.5s ease;
+}
+
+.project-card p {
+    text-align: center;
+}
+
+.previous {
+    transform: perspective(1000px) rotateY(-20deg);
+}
+
+.previous:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.current {
+    transform: perspective(1000px) scale(1.2);
+}
+
+.next {
+    transform: perspective(1000px) rotateY(20deg);
+}
+
+.next:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.navigation {
+  position: fixed;
+  top: 50%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+
 
 ::-webkit-scrollbar {
     width: 5px; /* Largura da barra de rolagem */
