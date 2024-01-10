@@ -92,16 +92,17 @@
         </div>
 
         <div class="projetos">
+            <h2>Projetos principais</h2>
             <div class="projects-container">
                 <button id="prevButton">&lt;</button>
                 <div class="project-card previous">
                     <p>Relatorio BI - NPS</p>
                 </div>
                 <div class="project-card current">
-                    <p>Lab 2</p>
+                    <p>App mobile - Lab 2</p>
                 </div>
                 <div class="project-card next">
-                    <p>Meu negocio</p>
+                    <p>App mobile - Meu negocio</p>
                 </div>
                 <button id="nextButton">&gt;</button>
             </div> 
@@ -122,6 +123,28 @@
         <div class="divider">
             <div class="barra-divider"></div>
         </div>
+
+        <div class="sobre-mim">
+            <h2>Sobre mim</h2>
+            <p>Olá, eu sou Gabriel, um entusiasta apaixonado pelo desenvolvimento de software. Minha paixão pelo processo de desenvolvimento, desde a concepção até a entrega, é impulsionada pela minha alegria em programar, pela satisfação de atender às necessidades dos clientes e pela emoção de corrigir bugs.
+
+                Atualmente, minha principal habilidade está no desenvolvimento nativo para Android. No entanto, estou em busca de me especializar ainda mais, expandindo meu conhecimento para incluir o desenvolvimento nativo para iOS, Android e também para desktop.
+                
+                Meu portfólio inclui projetos significativos que demonstram minha experiência. Entre eles, destaco um aplicativo Android desenvolvido para uso em laboratórios, outro voltado para microempresas, visando melhorar os registros de atendimento, e um relatório do Power BI no qual analisei dados de pesquisas NPS, identificando áreas de melhoria, classificando-as e calculando o índice NPS.
+                
+                Meu objetivo é trabalhar como desenvolvedor backend, com foco em Java, C# e SQL, embora também tenha habilidades em linguagens frontend como HTML5, CSS3 e JavaScript.
+                
+                Abordo os desafios de desenvolvimento como oportunidades de melhoria, sempre dedicando-me a encontrar soluções rápidas para garantir a satisfação dos clientes.
+                
+                Tenho preferência por linguagens orientadas a objetos, especialmente C# e Java. Meu hobby é aprender novas tecnologias e buscar constantemente melhorias nos meus projetos, como aplicativos e portfólio.
+                
+                Para me manter atualizado, acompanho canais no YouTube e priorizo tanto meu desenvolvimento pessoal quanto a satisfação do cliente.
+                
+                Um dos meus diferenciais é minha disposição para me envolver em diferentes tipos de projetos, não importando sua complexidade, sempre buscando maneiras de contribuir da melhor forma possível.
+                
+                Em resumo, nunca estou satisfeito com meu conhecimento atual. Estou sempre em busca de aprimoramento, aprendendo e evoluindo constantemente.</p>
+        </div>
+
 
         <button id="btn-top" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
         <button id="btn-bottom" onclick="scrollToBottom()"><i class="fa-solid fa-arrow-down"></i></button>
@@ -404,7 +427,7 @@ button {
 
 .barra-divider {
     width: 95%;
-    height: 1.5px;
+    height: 1px;
     margin-bottom: 50px;
     background-color: var(--cor-texto); /* Cor da linha */
 }
@@ -449,8 +472,13 @@ button {
 }
 
 .projetos {
-    margin-top: 70px;
     margin-bottom: 70px;
+}
+
+.projetos h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
 }
 
 .projects-container {
@@ -546,6 +574,22 @@ button {
     height: 500px;
     width: 70%;
     margin-left: 35px;
+}
+
+.sobre-mim {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.sobre-mim p {
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.8;
+    color: var(--cor-texto);
 }
 
 ::-webkit-scrollbar {
