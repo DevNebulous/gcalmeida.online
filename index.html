@@ -104,7 +104,23 @@
                     <p>Meu negocio</p>
                 </div>
                 <button id="nextButton">&gt;</button>
-              </div>              
+            </div> 
+            <div class="resumo-projeto">
+                <div class="images-projeto">
+                    <h1>resumo images</h1>
+                    <div class="buttons-images">
+                        <button id="previmage">&lt;</button>
+                        <button id="nextimage">&gt;</button>
+                    </div>
+                </div>
+                <div class="resumo">
+                    <h1>resumo</h1>
+                </div>
+            </div>             
+        </div>
+
+        <div class="divider">
+            <div class="barra-divider"></div>
         </div>
 
         <button id="btn-top" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
@@ -489,7 +505,48 @@ button {
   background-color: transparent;
 }
 
+.resumo-projeto {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 120px;
+}
 
+.resumo-projeto li {
+    display: inline-block;
+}
+
+.images-projeto {
+    border: var(--cor-texto) 1px solid;
+    height: 500px;
+    width: 30%;
+}
+
+.images-projeto button{
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    height: 100%;
+}
+
+.images-projeto button:hover {
+    font-size: 25px;
+}
+
+.buttons-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50%;
+}
+
+.resumo {
+    border: var(--cor-texto) 1px solid;
+    height: 500px;
+    width: 70%;
+    margin-left: 35px;
+}
 
 ::-webkit-scrollbar {
     width: 5px; /* Largura da barra de rolagem */
