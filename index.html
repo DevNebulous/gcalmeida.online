@@ -24,16 +24,16 @@
                                     <a href="" class="btn-home" id="btn-home-id">Home</a>
                                 </li>
                                 <li>
-                                    <a href="">Habilidades</a>
+                                    <a href="#habilidades-scroll">Habilidades</a>
                                 </li>
                                 <li>
-                                    <a href="">Projetos</a>
+                                    <a href="#projetos-scroll">Projetos</a>
                                 </li>
                                 <li>
-                                    <a href="">Sobre</a>
+                                    <a href="#sobremim-scroll">Sobre</a>
                                 </li>
                                 <li>
-                                    <a href="">Contato</a>
+                                    <a href="#contato-scroll">Contato</a>
                                 </li>
                             </ul>
                         </div>
@@ -72,7 +72,7 @@
         </div> 
         <div class="habilidades">
             <div class="title-habilidades">
-                <h2>Habilidades</h2>
+                <h2 id="habilidades-scroll">Habilidades</h2>
             </div>
             <ul>
                 <li><i class="fab fa-java"></i><span class="tooltip">Java</span></li>
@@ -92,17 +92,18 @@
         </div>
 
         <div class="projetos">
-            <h2>Projetos principais</h2>
+            <h2 id="projetos-scroll">Projetos em destaque</h2>
             <div class="projects-container">
                 <button id="prevButton">&lt;</button>
                 <div class="project-card previous" id="relatorio-bi">
-                    <p>Projeto Anterior</p>
+                    <img src="image_bi.png" alt="image.png">
+                    <p>Relatorio Power BI</p>
                 </div>
                 <div class="project-card current" id="app-lab-2">
-                    <p>Projeto Atual</p>
+                    <p>App Lab2</p>
                 </div>
                 <div class="project-card next" id="app-meu-negocio">
-                    <p>Próximo Projeto</p>
+                    <p>App Meu negocio</p>
                 </div>
                 <button id="nextButton">&gt;</button>
             </div>
@@ -116,7 +117,18 @@
                         </div>
                     </div>
                     <div class="resumo">
-                        <h1>Resumo do Projeto</h1>
+                        <div class="h1-projeto">
+                            <h3>Resumo do Projeto: </h3>
+                            <p> O Lab2 é um aplicativo móvel dedicado a tablets, desenvolvido para uma empresa com o objetivo de otimizar os processos laboratoriais. No ambiente da empresa, os técnicos recebem amostras e realizam ensaios nelas. O aplicativo se integra ao sistema principal do cliente por meio de uma API, permitindo que os tablets acessem as amostras a serem testadas, exibam os ensaios aos técnicos e retornem os resultados dos ensaios, eliminando a necessidade de fichários em papel. O Lab2 foi desenvolvido utilizando Google Firebase, Java e SQL para criar um aplicativo nativo. O principal desafio foi garantir que o aplicativo fosse totalmente dinâmico e, ao mesmo tempo, atendesse aos requisitos do cliente. O Lab2 foi bem recebido pelo laboratório do cliente e continua sendo utilizado até hoje. O aplicativo é elogiado por sua total dinamicidade e intuitividade, facilitando e agilizando um dos processos essenciais para o cliente.</p>
+                        </div>
+                        <div class="tecnologias"> 
+                            <h3>Tecnologias: </h3>
+                            <ul>
+                                <li><i class="fab fa-java"></i><span class="tooltip">Java</span></li>
+                                <li><i class="fa-solid fa-database"></i><span class="tooltip">SQL</span></li>
+                            </ul>
+                        </div>
+                        <div class="resumo-imagem"> <h3>Resumo da imagem: </h3></div>
                     </div>
                 </div>
             </div>
@@ -128,7 +140,7 @@
         </div>
 
         <div class="sobre-mim">
-            <h2>Sobre mim</h2>
+            <h2 id="sobremim-scroll">Sobre mim</h2>
             <p>Olá, eu sou Gabriel, um entusiasta apaixonado pelo desenvolvimento de software. Minha paixão pelo processo de desenvolvimento, desde a concepção até a entrega, é impulsionada pela minha alegria em programar, pela satisfação de atender às necessidades dos clientes e pela emoção de corrigir bugs.
 
                 Atualmente, minha principal habilidade está no desenvolvimento nativo para Android. No entanto, estou em busca de me especializar ainda mais, expandindo meu conhecimento para incluir o desenvolvimento nativo para iOS, Android e também para desktop.
@@ -245,41 +257,75 @@
             `;
             if (id == "relatorio-bi") {
                 html = `
-                    <div class="images-projeto">
-                        <h1> relatorio bi </h1>
+                <div class="images-projeto">
+                        <h1>Resumo das Imagens</h1>
                         <div class="buttons-images">
                             <button id="previmage">&lt;</button>
                             <button id="nextimage">&gt;</button>
                         </div>
                     </div>
                     <div class="resumo">
-                        <h1>resumo</h1>
+                        <div class="h1-projeto">
+                            <h3>Resumo do Projeto: </h3>
+                            <p> O projeto "Relatório da Pesquisa de Satisfação" foi iniciado para atender à necessidade do cliente em aprimorar suas interações com os clientes. O foco do projeto foi a análise detalhada dos dados para identificar os principais pontos de falha da empresa, bem como as áreas de maior e menor satisfação do cliente. Além disso, o projeto calcula o NPS (Net Promoter Score), um indicador padronizado que mede a satisfação dos clientes com o atendimento. Embora não sejam tecnologias específicas, o projeto envolveu o desenvolvimento da estrutura do relatório, utilizando SQL e DAX. Um dos desafios foi estabelecer as relações entre as tabelas de dados e determinar quais indicadores seriam mais eficazes para o cliente. O projeto foi muito bem recebido dentro da empresa do cliente, desde os técnicos até a gerência e as áreas de metas. </p>
+                        </div>
+                        <div class="tecnologias"> 
+                            <h3>Tecnologias: </h3>
+                            <ul>
+                                <li>PBI<span class="tooltip">Power BI</span></li>
+                                <li>DAX<span class="tooltip">Data Analysis Expressions</span></li>
+                                <li><i class="fa-solid fa-database"></i><span class="tooltip">SQL</span></li>
+                            </ul>
+                        </div>
+                        <div class="resumo-imagem"> <h3>Resumo da imagem: </h3></div>
                     </div>
                 `;
             } else if (id == "app-lab-2") {
                 html = `
-                    <div class="images-projeto">
-                        <h1> app lab 2 </h1>
+                <div class="images-projeto">
+                        <h1>Resumo das Imagens</h1>
                         <div class="buttons-images">
                             <button id="previmage">&lt;</button>
                             <button id="nextimage">&gt;</button>
                         </div>
                     </div>
                     <div class="resumo">
-                        <h1>resumo</h1>
+                        <div class="h1-projeto">
+                            <h3>Resumo do Projeto: </h3>
+                            <p> O Lab2 é um aplicativo móvel dedicado a tablets, desenvolvido para uma empresa com o objetivo de otimizar os processos laboratoriais. No ambiente da empresa, os técnicos recebem amostras e realizam ensaios nelas. O aplicativo se integra ao sistema principal do cliente por meio de uma API, permitindo que os tablets acessem as amostras a serem testadas, exibam os ensaios aos técnicos e retornem os resultados dos ensaios, eliminando a necessidade de fichários em papel. O Lab2 foi desenvolvido utilizando Google Firebase, Java e SQL para criar um aplicativo nativo. O principal desafio foi garantir que o aplicativo fosse totalmente dinâmico e, ao mesmo tempo, atendesse aos requisitos do cliente. O Lab2 foi bem recebido pelo laboratório do cliente e continua sendo utilizado até hoje. O aplicativo é elogiado por sua total dinamicidade e intuitividade, facilitando e agilizando um dos processos essenciais para o cliente.</p>
+                        </div>
+                        <div class="tecnologias"> 
+                            <h3>Tecnologias: </h3>
+                            <ul>
+                                <li><i class="fab fa-java"></i><span class="tooltip">Java</span></li>
+                                <li><i class="fa-solid fa-database"></i><span class="tooltip">SQL</span></li>
+                            </ul>
+                        </div>
+                        <div class="resumo-imagem"> <h3>Resumo da imagem: </h3></div>
                     </div>
                 `;
             } else if (id == "app-meu-negocio") {
                 html = `
-                    <div class="images-projeto">
-                        <h1> app meu negocio </h1>
+                <div class="images-projeto">
+                        <h1>Resumo das Imagens</h1>
                         <div class="buttons-images">
                             <button id="previmage">&lt;</button>
                             <button id="nextimage">&gt;</button>
                         </div>
                     </div>
                     <div class="resumo">
-                        <h1>resumo</h1>
+                        <div class="h1-projeto">
+                            <h3>Resumo do Projeto: </h3>
+                            <p> O projeto "Meu Negócio" foi concebido como um aplicativo de suporte para microempresas de serviços. Ele permite o registro e controle de agendamentos, clientes e horários, além de oferecer um resumo mensal financeiro. O aplicativo também possibilita o cadastro de serviços e clientes para vinculação a agendamentos e disponibiliza mensagens pré-definidas para comunicação ágil com os clientes, entre outros recursos. Para sua criação, foram utilizadas as tecnologias Firebase, Java e SQL. O principal desafio foi garantir uma experiência livre de problemas para os usuários no dia a dia, priorizando configurações flexíveis e a agilidade na inserção e coleta de dados. Embora ainda não tenha sido lançado publicamente, o aplicativo destaca-se pela sua usabilidade, permitindo o registro de fotos no atendimento, forma de pagamento e status de pagamento do cliente, com foco na eliminação de falhas e na inclusão de todos os registros relacionados à venda de serviços. Para quem não está familiarizado, o aplicativo é descrito como uma solução que gerencia os serviços de forma eficiente e sem complicações, eliminando preocupações como cobranças e atrasos. </p>
+                        </div>
+                        <div class="tecnologias"> 
+                            <h3>Tecnologias: </h3>
+                            <ul>
+                                <li><i class="fab fa-java"></i><span class="tooltip">Java</span></li>
+                                <li><i class="fa-solid fa-database"></i><span class="tooltip">SQL</span></li>
+                            </ul>
+                        </div>
+                        <div class="resumo-imagem"> <h3>Resumo da imagem: </h3></div>
                     </div>
                 `;
             }
@@ -330,6 +376,19 @@
             }
         });
 
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Obtém o destino do link
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                // Rola a página até o elemento de destino
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
 
     </script>
     <style>
@@ -557,6 +616,8 @@ button {
     margin-bottom: 70px;
 }
 
+
+
 .projetos h2 {
     display: flex;
     justify-content: center;
@@ -577,9 +638,23 @@ button {
     height: 200px; /* Ajuste conforme necessário */
     background-color: var(--cor-fundo); /* Cor de fundo dos cards */
     transform-style: preserve-3d;
-    border: var(--cor-texto) solid 2px;
     border-radius: 2px;
     transition: transform 0.5s ease;
+}
+
+#relatorio-bi img {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    border: var(--cor-texto) solid 1px;
+}
+
+#relatorio-bi p {
+    position: absolute;
+    width: 100%;
+    background-color: var(--cor-fundo);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border: var(--cor-texto) solid 0.5px;
 }
 
 .project-card p {
@@ -616,7 +691,7 @@ button {
 }
 
 .notanimate-resumo {
-    height: 500px;
+    height: 550px;
     margin-top: 120px;
 }
 
@@ -647,7 +722,7 @@ button {
     position: absolute;
     transition: all 0.5s ease;
     transform: translateY(100%); /* Move a div para fora da tela no topo */
-    height: 500px;
+    height: 550px;
     animation: slideInTop 0.3s forwards;
 }
 
@@ -690,9 +765,66 @@ button {
 }
 
 .resumo {
-    border: var(--cor-texto) 1px solid;
     width: 70%;
     margin-left: 35px;
+}
+
+.resumo div {
+    width: 100%;
+}
+
+.resumo li {
+    font-size: 50px;
+    color: var(--cor-texto);
+    margin-left: 50px;
+    display: inline-block;
+
+}
+
+.resumo li:hover .tooltip {
+    display: block;
+    font-size: 20px;
+}
+
+.resumo p {
+    margin-top: 1%;
+    height: 100%;
+    width: 100%;
+    line-height: 1.8;
+    text-align: center  ;
+}
+
+.tooltip {
+    display: none;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
+    padding: 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+.h1-projeto {
+    height: 70%;
+}
+
+.tecnologias {
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tecnologias ul {
+    display: inline-block;
+    margin-right: 5%;
+}
+
+
+.resumo-imagem {
+    height: 15%;
 }
 
 .sobre-mim {
