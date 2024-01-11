@@ -11,39 +11,38 @@
 </head>
 <body>
     <div class="page">
-        <div class="home">
-            <div class="navbar-container">
-                <nav>
-                    <div class="div-nav">
-                        <div id="theme-toggle" class="icon-theme">
-                            <a href="#"><i id="theme-icon" class="fas fa-moon"></i></a>
-                        </div>
-                        <div>
-                            <ul class="navbar-itens">
-                                <li>
-                                    <a href="" class="btn-home" id="btn-home-id">Home</a>
-                                </li>
-                                <li>
-                                    <a href="#habilidades-scroll">Habilidades</a>
-                                </li>
-                                <li>
-                                    <a href="#projetos-scroll">Projetos</a>
-                                </li>
-                                <li>
-                                    <a href="#sobremim-scroll">Sobre</a>
-                                </li>
-                                <li>
-                                    <a href="#contato-scroll">Contato</a>
-                                </li>
-                            </ul>
-                        </div>
+        <div class="navbar-container">
+            <nav>
+                <div class="div-nav">
+                    <div id="theme-toggle" class="icon-theme">
+                        <a href="#"><i id="theme-icon" class="fas fa-moon"></i></a>
                     </div>
-                </nav>
-
-            </div>
+                    <div>
+                        <ul class="navbar-itens">
+                            <li>
+                                <a href="" class="btn-home" id="btn-home-id">Home</a>
+                            </li>
+                            <li>
+                                <a href="#habilidades-scroll">Habilidades</a>
+                            </li>
+                            <li>
+                                <a href="#projetos-scroll">Projetos</a>
+                            </li>
+                            <li>
+                                <a href="#sobremim-scroll">Sobre</a>
+                            </li>
+                            <li>
+                                <a href="#contato-scroll">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="home" id="bannerHome">
             <main>
                 <div class="main-banner">
-                    <h2>Olá, me chamo Gabriel</h2>
+                    <h2 id="typing-effect">Olá, me chamo Gabriel</h2>
                     <h1>Desenvolvedor Back-End</h1>
                     <p>Sou estudante de Engenharia de Software com experiência em desenvolvimento mobile. Atualmente, trabalho como assistente de informações gerenciais enquanto busco me tornar um engenheiro de software back end. Em meu tempo livre, gosto de aprender sobre novas tecnologias para expandir minhas habilidades.</p>
                     <a href="/gabriel_camilo_cv.pdf" download="gabriel_camilo_cv.pdf" class="button">
@@ -65,7 +64,7 @@
                         </ul>
                     </div>
                 </div>
-            </main>
+            </main>            
         </div>
         <div class="divider">
             <div class="barra-divider"></div>
@@ -111,11 +110,13 @@
             </div>
             <div class="notanimate-resumo">
                 <div class="resumo-projeto" id="projeto-resumo">
-                    <div class="images-projeto">
-                        <h1>Resumo das Imagens</h1>
-                        <div class="buttons-images">
-                            <button id="previmage">&lt;</button>
-                            <button id="nextimage">&gt;</button>
+                    <div class="container-images">
+                        <div class="images-projeto">
+                          <div class="carousel">
+                            <img src="image_bi.png" alt="Descrição da Imagem 1">
+                            <img src="image_lab2.png" alt="Descrição da Imagem 2">
+                            <img src="image_meu_negocio.png" alt="Descrição da Imagem 3">
+                          </div>
                         </div>
                     </div>
                     <div class="resumo">
@@ -160,6 +161,10 @@
                 Em resumo, nunca estou satisfeito com meu conhecimento atual. Estou sempre em busca de aprimoramento, aprendendo e evoluindo constantemente.</p>
         </div>
 
+        <div class="divider">
+            <div class="barra-divider"></div>
+        </div>
+
 
         <button id="btn-top" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
         <button id="btn-bottom" onclick="scrollToBottom()"><i class="fa-solid fa-arrow-down"></i></button>
@@ -168,6 +173,26 @@
 
 
     <script>
+
+
+        function atualizarAlturaDaDiv() {
+            var alturaDaTela = window.innerHeight;
+            var homeDiv = document.getElementById('bannerHome');
+            homeDiv.style.height = (alturaDaTela - 80) + 'px';
+        }
+
+        // Adicionar um ouvinte de evento para o redimensionamento da janela
+        window.addEventListener('resize', function() {
+        // Chamando a função para atualizar a altura da div quando a janela for redimensionada
+        atualizarAlturaDaDiv();
+        });
+
+        // Chamar a função inicialmente para definir a altura corretamente quando a página for carregada
+        atualizarAlturaDaDiv();
+
+
+
+
         // Seleciona os elementos do DOM
         const themeToggle = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
@@ -257,11 +282,13 @@
             `;
             if (id == "relatorio-bi") {
                 html = `
-                <div class="images-projeto">
-                        <h1>Resumo das Imagens</h1>
-                        <div class="buttons-images">
-                            <button id="previmage">&lt;</button>
-                            <button id="nextimage">&gt;</button>
+                <div class="container-images">
+                        <div class="images-projeto">
+                          <div class="carousel">
+                            <img src="image_bi.png" alt="Descrição da Imagem 1">
+                            <img src="image_lab2.png" alt="Descrição da Imagem 2">
+                            <img src="image_meu_negocio.png" alt="Descrição da Imagem 3">
+                          </div>
                         </div>
                     </div>
                     <div class="resumo">
@@ -282,11 +309,13 @@
                 `;
             } else if (id == "app-lab-2") {
                 html = `
-                <div class="images-projeto">
-                        <h1>Resumo das Imagens</h1>
-                        <div class="buttons-images">
-                            <button id="previmage">&lt;</button>
-                            <button id="nextimage">&gt;</button>
+                <div class="container-images">
+                        <div class="images-projeto">
+                          <div class="carousel">
+                            <img src="image_bi.png" alt="Descrição da Imagem 1">
+                            <img src="image_lab2.png" alt="Descrição da Imagem 2">
+                            <img src="image_meu_negocio.png" alt="Descrição da Imagem 3">
+                          </div>
                         </div>
                     </div>
                     <div class="resumo">
@@ -306,11 +335,13 @@
                 `;
             } else if (id == "app-meu-negocio") {
                 html = `
-                <div class="images-projeto">
-                        <h1>Resumo das Imagens</h1>
-                        <div class="buttons-images">
-                            <button id="previmage">&lt;</button>
-                            <button id="nextimage">&gt;</button>
+                <div class="container-images">
+                        <div class="images-projeto">
+                          <div class="carousel">
+                            <img src="image_bi.png" alt="Descrição da Imagem 1">
+                            <img src="image_lab2.png" alt="Descrição da Imagem 2">
+                            <img src="image_meu_negocio.png" alt="Descrição da Imagem 3">
+                          </div>
                         </div>
                     </div>
                     <div class="resumo">
@@ -429,6 +460,13 @@ body.light-mode {
 }
 
 
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 h1,
 h2,
 h3 {
@@ -443,10 +481,11 @@ p {
 /* nav bar */
 
 .navbar-container {
-    width: 100%;
+    width: 95%;
     height: 80px;
     background-color: transparent;
-    padding: 0 2rem;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
 }
 
 .div-nav {
@@ -487,9 +526,11 @@ p {
 }
 
 
+
 .main-banner {
-    margin-left: 30px;
-    padding: 6rem 0;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
 }
 
 .main-banner h1,
@@ -498,7 +539,7 @@ p {
 }
 
 .main-banner p {
-    width: 600px;
+    width: 50%;
     color: var(--cor-texto);
     line-height: 1.8;
 }
@@ -570,6 +611,7 @@ button {
     width: 95%;
     height: 1px;
     margin-bottom: 50px;
+    margin-top: 50px;
     background-color: var(--cor-texto); /* Cor da linha */
 }
 
@@ -577,7 +619,6 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 70px;
 }
 
 .habilidades li {
@@ -613,10 +654,7 @@ button {
 }
 
 .projetos {
-    margin-bottom: 70px;
 }
-
-
 
 .projetos h2 {
     display: flex;
@@ -691,7 +729,7 @@ button {
 }
 
 .notanimate-resumo {
-    height: 550px;
+    height: 700px;
     margin-top: 120px;
 }
 
@@ -722,7 +760,7 @@ button {
     position: absolute;
     transition: all 0.5s ease;
     transform: translateY(100%); /* Move a div para fora da tela no topo */
-    height: 550px;
+    height: 700px;
     animation: slideInTop 0.3s forwards;
 }
 
@@ -742,30 +780,35 @@ button {
     display: inline-block;
 }
 
-.images-projeto {
-    border: var(--cor-texto) 1px solid;
-    width: 30%;
-}
-
-.images-projeto button{
-    border: none;
-    background-color: transparent;
-    font-size: 20px;
-    height: 100%;
-}
-
-.images-projeto button:hover {
-    font-size: 25px;
-}
-
-.buttons-images {
+.container-images {
     display: flex;
-    justify-content: space-between;
-    margin-top: 50%;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.images-projeto {
+    text-align: center;
+    
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Suporte para scroll suave no iOS */
+}
+
+.carousel img {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
 }
 
 .resumo {
-    width: 70%;
+    width: 60%;
     margin-left: 35px;
 }
 
