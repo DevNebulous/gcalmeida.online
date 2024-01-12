@@ -1,0 +1,431 @@
+
+body {
+    --cor-fundo: #333; /* Cor de fundo para tema escuro */
+    --cor-texto: #f5f5f5; /* Cor do texto para tema escuro */
+    
+}
+
+body.light-mode {
+    --cor-fundo: #f5f5f5; /* Cor de fundo para tema claro */
+    --cor-texto: #333; /* Cor do texto para tema claro */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    transition: 0.5s;
+    background-color: var(--cor-fundo);
+}
+
+#btn-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
+#btn-bottom {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
+
+h1,
+h2,
+h3 {
+    color: var(--cor-texto);
+}
+
+p {
+    color: var(--cor-texto);
+}
+
+
+/* nav bar */
+
+.navbar-container {
+    width: 95%;
+    height: 80px;
+    background-color: transparent;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.div-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-theme{
+    height: 80px;
+    font-size: 20px;
+    line-height: 80px;
+}
+
+
+#theme-icon {
+    color: var(--cor-texto);
+}
+
+.navbar-itens {
+    height: 80px;
+    line-height: 80px;
+    display: inline-block;
+}
+
+.navbar-itens li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.navbar-itens a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-itens a:hover {
+    color: #ccc;
+}
+
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    
+}
+
+.svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 90%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border: red solid 2px;
+}
+
+.svg {
+    height: 80%;
+    border: green solid 2px;
+}
+
+.superior-main {
+    width: 60%;
+    
+}
+
+.main-banner {
+    width: 100%;
+    margin-left: 0;
+
+}
+
+.main-banner h1,
+.main-banner p {
+    margin-bottom: 8px; /* Define a margem inferior de 10 pixels para os elementos h2, h1 e p dentro da div */
+}
+
+.main-banner p {
+    width: 50%;
+    color: var(--cor-texto);
+    line-height: 1.8;
+}
+
+.icons-sociais {/* Vertically center the icons */
+    margin-top: 10px;
+}
+
+.icons-sociais li {
+    display: inline-block;
+    margin-top: 10px;   
+}
+
+.icons-sociais a {
+    font-size: 25px;
+    color: var(--cor-texto);
+}
+
+.icons-sociais a:hover {
+    color: #70747a;
+}
+
+.whats,
+.git {
+    margin-left: 20px;
+}
+
+button {    
+    background-color: var(--cor-fundo); /* Green */
+    border: 2px solid var(--cor-texto);
+    color: var(--cor-texto);
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\21D3';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.divider {
+    display: flex;
+    justify-content: center;
+}
+
+.barra-divider {
+    width: 95%;
+    height: 1px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background-color: var(--cor-texto); /* Cor da linha */
+}
+
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.habilidades li {
+    display: inline-block;
+    color: var(--cor-texto);
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 70px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.habilidades ul {
+    margin-top: 40px;
+}
+
+.habilidades li:hover .tooltip{
+    display: block;
+    font-size: 20px;
+}
+
+.tooltip {
+    display: none;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
+    padding: 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+.projetos {
+}
+
+.projetos h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%; /* Ajuste conforme necessário */
+}
+
+.project-card {
+    width: 25%; /* Ajuste conforme necessário */
+    height: 220px; /* Ajuste conforme necessário */
+    background-color: var(--cor-fundo); /* Cor de fundo dos cards */
+    transform-style: preserve-3d;
+    border-radius: 2px;
+    transition: transform 0.5s ease;
+}
+
+.project-card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: var(--cor-texto) solid 1px;
+}
+
+.project-card p {
+    position: absolute;
+    width: 100%;
+    background-color: var(--cor-fundo);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border: var(--cor-texto) solid 0.5px;
+}
+
+.project-card p {
+    text-align: center;
+}
+
+.previous {
+    transform: perspective(1000px) rotateY(-20deg);
+}
+
+.previous:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.current {
+    transform: perspective(1000px) scale(1.2);
+}
+
+.next {
+    transform: perspective(1000px) rotateY(20deg);
+}
+
+.next:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.navigation {
+    position: fixed;
+    top: 50%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.descricao-projetos-container {
+    margin-top: 80px;
+}
+
+.descricao-projetos {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.image-projeto {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-projeto img {
+    width: auto;
+    height: 100%;
+    border: solid var(--cor-texto) 1px;
+}
+
+.descricao-projeto {
+    margin-top: 20px;
+    height: auto;
+}
+
+.descricao-projeto h3 {
+    text-align: center;
+}
+
+.descricao-projeto p {
+    text-align: justify;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+.tecnologias-projeto {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tecnologias-projeto li {
+    display: inline-block;
+    color: var(--cor-texto);
+    margin-left: 35px;
+    font-size: 30px;
+}
+
+.tecnologias-projeto li:hover .tooltip{
+    display: block;
+    font-size: 20px;
+}
+
+
+.projetos-adicionais {
+    display: flex;
+    flex-wrap: wrap; 
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 20px;
+}
+
+.sobre-mim {
+    width: 90%;
+    height: auto;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.sobre-mim h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sobre-mim p {
+    text-align: center;
+    line-height: 2;
+}
+
+::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */
+}
+
+/* Estilizando a área de fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background-color: var(--cor-fundo); /* Cor de fundo da barra de rolagem */
+}
+
+/* Estilizando a alça da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background-color: var(--cor-texto); /* Cor da alça da barra de rolagem */
+}
+
+/* Estilizando as esquinas da barra de rolagem */
+::-webkit-scrollbar-corner {
+    background-color: var(--cor-fundo); /* Cor de fundo das esquinas da barra de rolagem */
+}

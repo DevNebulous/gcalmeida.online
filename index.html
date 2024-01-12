@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="gcalmeida.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Lato|Montserrat&display=swap">
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="page">
@@ -19,9 +19,6 @@
                     </div>
                     <div>
                         <ul class="navbar-itens">
-                            <li>
-                                <a href="" class="btn-home" id="btn-home-id">Home</a>
-                            </li>
                             <li>
                                 <a href="#habilidades-scroll">Habilidades</a>
                             </li>
@@ -40,38 +37,46 @@
             </nav>
         </div>
         <div class="home" id="bannerHome">
-            <main>
-                <div class="main-banner">
-                    <h2 id="typing-effect">Olá, me chamo Gabriel</h2>
-                    <h1>Desenvolvedor Back-End</h1>
-                    <p>Sou estudante de Engenharia de Software com experiência em desenvolvimento mobile. Atualmente, trabalho como assistente de informações gerenciais enquanto busco me tornar um engenheiro de software back end. Em meu tempo livre, gosto de aprender sobre novas tecnologias para expandir minhas habilidades.</p>
-                    <a href="/gabriel_camilo_cv.pdf" download="gabriel_camilo_cv.pdf" class="button">
-                        <button>
-                            <span>Baixar CV</span>
-                        </button>
-                    </a>
-                    <div>
-                        <ul class="icons-sociais">
-                            <li>
-                                <a href="https://www.linkedin.com/in/gabriel-camilo-1542771bb/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/DevNebulous" target="_blank" class="git"><i class="fab fa-github"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://api.whatsapp.com/send?phone=5541996129534" target="_blank" class="whats"><i class="fab fa-whatsapp"></i></a>
-                            </li>
-                        </ul>
+            <div class="superior-main">
+                <main>
+                    <div class="main-banner">
+                        <h2 id="typing-effect">Olá, me chamo Gabriel</h2>
+                        <h1>Desenvolvedor Back-End</h1>
+                        <p>Sou estudante de Engenharia de Software com experiência em desenvolvimento mobile. Atualmente, trabalho como assistente de informações gerenciais enquanto busco me tornar um engenheiro de software back end. Em meu tempo livre, gosto de aprender sobre novas tecnologias para expandir minhas habilidades.</p>
+                        <a href="/gabriel_camilo_cv.pdf" download="gabriel_camilo_cv.pdf" class="button">
+                            <button>
+                                <span>Baixar CV</span>
+                            </button>
+                        </a>
+                        <div>
+                            <ul class="icons-sociais">
+                                <li>
+                                    <a href="https://www.linkedin.com/in/gabriel-camilo-1542771bb/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/DevNebulous" target="_blank" class="git"><i class="fab fa-github"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://api.whatsapp.com/send?phone=5541996129534" target="_blank" class="whats"><i class="fab fa-whatsapp"></i></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+                </main>     
+            </div>
+            <div class="svg-container">
+                <div class="svg">
+                    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+                    <dotlottie-player src="https://lottie.host/70ee8435-d320-411e-83d9-bad7e552a75d/Ca1jjw6NpR.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></dotlottie-player>
                 </div>
-            </main>            
+            </div>
         </div>
-        <div class="divider">
-            <div class="barra-divider"></div>
+        <div class="divider" >
+            <div class="barra-divider" id="habilidades-scroll"></div>
         </div> 
         <div class="habilidades">
             <div class="title-habilidades">
-                <h2 id="habilidades-scroll">Habilidades</h2>
+                <h2 >Habilidades</h2>
             </div>
             <ul>
                 <li><i class="fab fa-java"></i><span class="tooltip">Java</span></li>
@@ -87,63 +92,54 @@
         </div>
 
         <div class="divider">
-            <div class="barra-divider"></div>
+            <div class="barra-divider" id="projetos-scroll"></div>
         </div>
 
         <div class="projetos">
-            <h2 id="projetos-scroll">Projetos em destaque</h2>
+            <h2 >Projetos em destaque</h2>
             <div class="projects-container">
-                <button id="prevButton">&lt;</button>
                 <div class="project-card previous" id="relatorio-bi">
-                    <img src="image_bi_1.png" alt="image.png">
+                    <img src="img/bi/image_bi_1.png" alt="image.png">
                     <p>Relatorio Power BI</p>
                 </div>
                 <div class="project-card current" id="app-meu-negocio">
-                    <img src="image_meu_negocio.png" alt="image.png">
+                    <img src="img/meu-negocio/image_meu_negocio.png" alt="image.png">
                     <p>App Meu negocio</p>
                 </div>
                 <div class="project-card next" id="app-lab-2">
-                    <img src="image_lab2.png" alt="image.png">
+                    <img src="img/lab2/image_lab2.png" alt="image.png">
                     <p>App Lab2</p>
                 </div>
-                <button id="nextButton">&gt;</button>
+    
             </div>
-            <div class="notanimate-resumo">
-                <div class="resumo-projeto" id="projeto-resumo">
-                    <div class="container-images">
-                        <div class="images-projeto">
-                          <div class="carousel">
-                            <img src="negocio-1.jpg" alt="Descrição da Imagem 1">
-                            <img src="negocio-2.jpg" alt="Descrição da Imagem 2">
-                            <img src="negocio-3.jpg" alt="Descrição da Imagem 3">
-                            <img src="negocio-4.jpg" alt="Descrição da Imagem 1">
-                            <img src="negocio-5.jpg" alt="Descrição da Imagem 2">
-                            <img src="negocio-6.jpg" alt="Descrição da Imagem 3">
-                            <img src="negocio-7.jpg" alt="Descrição da Imagem 3">
-                          </div>
-                        </div>
+            <div class="descricao-projetos-container">
+                <div class="descricao-projetos">
+                    <div class="image-projeto">
+                        <img src="img/meu-negocio/negocio-1.jpg" alt='Demonstração da tela de login do projeto "Meu negocio" '>
                     </div>
-                    <div class="resumo">
-                        <div class="h1-projeto">
-                            <h3>Resumo do Projeto: </h3>
-                            <p> O projeto "Meu Negócio" foi concebido como um aplicativo de suporte para microempresas de serviços. Ele permite o registro e controle de agendamentos, clientes e horários, além de oferecer um resumo mensal financeiro. O aplicativo também possibilita o cadastro de serviços e clientes para vinculação a agendamentos e disponibiliza mensagens pré-definidas para comunicação ágil com os clientes, entre outros recursos. Para sua criação, foram utilizadas as tecnologias Firebase, Java e SQL. O principal desafio foi garantir uma experiência livre de problemas para os usuários no dia a dia, priorizando configurações flexíveis e a agilidade na inserção e coleta de dados. Embora ainda não tenha sido lançado publicamente, o aplicativo destaca-se pela sua usabilidade, permitindo o registro de fotos no atendimento, forma de pagamento e status de pagamento do cliente, com foco na eliminação de falhas e na inclusão de todos os registros relacionados à venda de serviços. Para quem não está familiarizado, o aplicativo é descrito como uma solução que gerencia os serviços de forma eficiente e sem complicações, eliminando preocupações como cobranças e atrasos. </p>
-                        </div>
-                        <div class="tecnologias"> 
-                            <h3>Tecnologias: </h3>
-                            <ul>
-                                <li><i class="fab fa-java"></i><span class="tooltip">Java</span></li>
-                                <li><i class="fa-solid fa-database"></i><span class="tooltip">SQL</span></li>
-                            </ul>
-                        </div>
-                        <div class="resumo-imagem"> <h3>Resumo da imagem: </h3></div>
+                    <div class="descricao-projeto">
+                        <h3>Descrição do projeto</h3>
+                        <p> O projeto "Meu Negócio" foi concebido como um aplicativo de suporte para microempresas de serviços. Ele permite o registro e controle de agendamentos, clientes e horários, além de oferecer um resumo mensal financeiro. O aplicativo também possibilita o cadastro de serviços e clientes para vinculação a agendamentos e disponibiliza mensagens pré-definidas para comunicação ágil com os clientes, entre outros recursos. Para sua criação, foram utilizadas as tecnologias Firebase, Java e SQL. O principal desafio foi garantir uma experiência livre de problemas para os usuários no dia a dia, priorizando configurações flexíveis e a agilidade na inserção e coleta de dados. Embora ainda não tenha sido lançado publicamente, o aplicativo destaca-se pela sua usabilidade, permitindo o registro de fotos no atendimento, forma de pagamento e status de pagamento do cliente, com foco na eliminação de falhas e na inclusão de todos os registros relacionados à venda de serviços. Para quem não está familiarizado, o aplicativo é descrito como uma solução que gerencia os serviços de forma eficiente e sem complicações, eliminando preocupações como cobranças e atrasos. </p>
+                    </div>
+                    <div class="tecnologias-projeto">
+                        <h3>Tecnologias:</h3>
+                        <ul>
+                            <li><i class="fab fa-java"></i><span class="tooltip">Java</span></li>
+                            <li><i class="fa-solid fa-database"></i><span class="tooltip">SQL</span></li>
+                        </ul>
                     </div>
                 </div>
             </div>
+            <div class="projetos-adicionais-container">
+                <div class="projetos-adicionais">
 
+                    
+                </div>
+            </div>
         </div>
 
         <div class="divider">
-            <div class="barra-divider"></div>
+            <div class="barra-divider" id="projetos-scroll"></div>
         </div>
 
         <div class="sobre-mim">
@@ -166,753 +162,13 @@
         </div>
 
         <div class="divider">
-            <div class="barra-divider"></div>
+            <div class="barra-divider" id="projetos-scroll"></div>
         </div>
-
 
         <button id="btn-top" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
         <button id="btn-bottom" onclick="scrollToBottom()"><i class="fa-solid fa-arrow-down"></i></button>
         
     </div>
-
-
-    <script>
-
-
-        function atualizarAlturaDaDiv() {
-            var alturaDaTela = window.innerHeight;
-            var homeDiv = document.getElementById('bannerHome');
-            homeDiv.style.height = (alturaDaTela - 80) + 'px';
-        }
-
-        // Adicionar um ouvinte de evento para o redimensionamento da janela
-        window.addEventListener('resize', function() {
-        // Chamando a função para atualizar a altura da div quando a janela for redimensionada
-        atualizarAlturaDaDiv();
-        });
-
-        // Chamar a função inicialmente para definir a altura corretamente quando a página for carregada
-        atualizarAlturaDaDiv();
-
-
-
-
-        // Seleciona os elementos do DOM
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        // Adiciona um listener de evento de clique ao themeToggle
-        themeToggle.addEventListener('click', () => {
-            // Alterna a classe 'light-mode' no body para alternar entre os modos claro e escuro
-            document.body.classList.toggle('light-mode');
-        
-            // Verifica se a classe 'light-mode' está presente no body
-            if (document.body.classList.contains('light-mode')) {
-                // Se o modo escuro estiver ativado, remove a classe 'fa-sun' e adiciona a classe 'fa-moon' ao themeIcon
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            } else {
-                // Se o modo escuro estiver desativado, remove a classe 'fa-moon' e adiciona a classe 'fa-sun' ao themeIcon
-
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-            }
-        });
-    
-
-        // Seleciona o botão "topo" pelo ID
-        var btnTop = document.getElementById('btn-top');
-        var btnbottom = document.getElementById('btn-bottom');
-        // Adiciona um evento de rolagem à janela
-        window.addEventListener('scroll', function() {
-            // Verifica se a posição vertical de rolagem da janela é maior que 100 pixels (ou seja, se rolou para baixo)
-            if (window.pageYOffset > 100) {
-                // Se rolou para baixo, mostra o botão "topo"
-                btnTop.style.display = 'block';
-                btnbottom.style.display = 'none';
-            } else {
-                // Se está no topo, oculta o botão "topo"
-                btnTop.style.display = 'none';
-                btnbottom.style.display = 'block';
-            }
-        });
-
-        // Função para rolar a página de volta para o topo
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-        function scrollToBottom() {
-            window.scrollTo({
-            top: document.documentElement.scrollHeight,
-            behavior: 'smooth'
-        }); 
-}
-
-
-        // Encontrar o elemento <a> pelo ID
-        var btnHome = document.getElementById('btn-home-id');
-
-        // Adicionar um ouvinte de evento de clique ao elemento <a>
-        btnHome.addEventListener('click', function(event) {
-            // Impedir o comportamento padrão do link (navegar para outra página)
-            event.preventDefault();
-            // Chamar a função scrollToTop() quando o link for clicado
-            scrollToTop();
-        });
-
-
-
-        // Seleciona os elementos relevantes
-        const prevButton = document.getElementById('prevButton');
-        const nextButton = document.getElementById('nextButton');
-        const projectCards = document.querySelectorAll('.project-card');
-
-        // Define o índice do projeto atual
-        let currentIndex = 1; // O índice começa em 1, pois o projeto atual é o segundo (índice 1)
-        function returnHtml(id) {
-            var html = `
-                <div class="images-projeto">
-                    <h1> h1padrao </h1>
-                    <div class="buttons-images">
-                        <button id="previmage">&lt;</button>
-                        <button id="nextimage">&gt;</button>
-                    </div>
-                </div>
-                <div class="resumo">
-                    <h1>resumo</h1>
-                </div>
-            `;
-            if (id == "relatorio-bi") {
-                html = `
-                <div class="container-images">
-                        <div class="images-projeto">
-                          <div class="carousel">
-                            <img src="image_bi_1.png" alt="Descrição da Imagem 1">
-                            <img src="image_bi_2.png" alt="Descrição da Imagem 2">
-                          </div>
-                        </div>
-                    </div>
-                    <div class="resumo">
-                        <div class="h1-projeto">
-                            <h3>Resumo do Projeto: </h3>
-                            <p> O projeto "Relatório da Pesquisa de Satisfação" foi iniciado para atender à necessidade do cliente em aprimorar suas interações com os clientes. O foco do projeto foi a análise detalhada dos dados para identificar os principais pontos de falha da empresa, bem como as áreas de maior e menor satisfação do cliente. Além disso, o projeto calcula o NPS (Net Promoter Score), um indicador padronizado que mede a satisfação dos clientes com o atendimento. Embora não sejam tecnologias específicas, o projeto envolveu o desenvolvimento da estrutura do relatório, utilizando SQL e DAX. Um dos desafios foi estabelecer as relações entre as tabelas de dados e determinar quais indicadores seriam mais eficazes para o cliente. O projeto foi muito bem recebido dentro da empresa do cliente, desde os técnicos até a gerência e as áreas de metas. </p>
-                        </div>
-                        <div class="tecnologias"> 
-                            <h3>Tecnologias: </h3>
-                            <ul>
-                                <li>PBI<span class="tooltip">Power BI</span></li>
-                                <li>DAX<span class="tooltip">Data Analysis Expressions</span></li>
-                                <li><i class="fa-solid fa-database"></i><span class="tooltip">SQL</span></li>
-                            </ul>
-                        </div>
-                        <div class="resumo-imagem"> <h3>Resumo da imagem: </h3></div>
-                    </div>
-                `;
-            } else if (id == "app-lab-2") {
-                html = `
-                <div class="container-images">
-                        <div class="images-projeto">
-                          <div class="carousel">
-                            <img src="lab2_1.png" alt="Descrição da Imagem 1">
-                            <img src="lab2_2.png" alt="Descrição da Imagem 2">
-                            <img src="lab2_3.png" alt="Descrição da Imagem 3">
-                          </div>
-                        </div>
-                    </div>
-                    <div class="resumo">
-                        <div class="h1-projeto">
-                            <h3>Resumo do Projeto: </h3>
-                            <p> O Lab2 é um aplicativo móvel dedicado a tablets, desenvolvido para uma empresa com o objetivo de otimizar os processos laboratoriais. No ambiente da empresa, os técnicos recebem amostras e realizam ensaios nelas. O aplicativo se integra ao sistema principal do cliente por meio de uma API, permitindo que os tablets acessem as amostras a serem testadas, exibam os ensaios aos técnicos e retornem os resultados dos ensaios, eliminando a necessidade de fichários em papel. O Lab2 foi desenvolvido utilizando Google Firebase, Java e SQL para criar um aplicativo nativo. O principal desafio foi garantir que o aplicativo fosse totalmente dinâmico e, ao mesmo tempo, atendesse aos requisitos do cliente. O Lab2 foi bem recebido pelo laboratório do cliente e continua sendo utilizado até hoje. O aplicativo é elogiado por sua total dinamicidade e intuitividade, facilitando e agilizando um dos processos essenciais para o cliente.</p>
-                        </div>
-                        <div class="tecnologias"> 
-                            <h3>Tecnologias: </h3>
-                            <ul>
-                                <li><i class="fab fa-java"></i><span class="tooltip">Java</span></li>
-                                <li><i class="fa-solid fa-database"></i><span class="tooltip">SQL</span></li>
-                            </ul>
-                        </div>
-                        <div class="resumo-imagem"> <h3>Resumo da imagem: </h3></div>
-                    </div>
-                `;
-            } else if (id == "app-meu-negocio") {
-                html = `
-                <div class="container-images">
-                        <div class="images-projeto">
-                          <div class="carousel">
-                            <img src="negocio-1.jpg" alt="Descrição da Imagem 1">
-                            <img src="negocio-2.jpg" alt="Descrição da Imagem 2">
-                            <img src="negocio-3.jpg" alt="Descrição da Imagem 3">
-                            <img src="negocio-4.jpg" alt="Descrição da Imagem 1">
-                            <img src="negocio-5.jpg" alt="Descrição da Imagem 2">
-                            <img src="negocio-6.jpg" alt="Descrição da Imagem 3">
-                            <img src="negocio-7.jpg" alt="Descrição da Imagem 3">
-                          </div>
-                        </div>
-                    </div>
-                    <div class="resumo">
-                        <div class="h1-projeto">
-                            <h3>Resumo do Projeto: </h3>
-                            <p> O projeto "Meu Negócio" foi concebido como um aplicativo de suporte para microempresas de serviços. Ele permite o registro e controle de agendamentos, clientes e horários, além de oferecer um resumo mensal financeiro. O aplicativo também possibilita o cadastro de serviços e clientes para vinculação a agendamentos e disponibiliza mensagens pré-definidas para comunicação ágil com os clientes, entre outros recursos. Para sua criação, foram utilizadas as tecnologias Firebase, Java e SQL. O principal desafio foi garantir uma experiência livre de problemas para os usuários no dia a dia, priorizando configurações flexíveis e a agilidade na inserção e coleta de dados. Embora ainda não tenha sido lançado publicamente, o aplicativo destaca-se pela sua usabilidade, permitindo o registro de fotos no atendimento, forma de pagamento e status de pagamento do cliente, com foco na eliminação de falhas e na inclusão de todos os registros relacionados à venda de serviços. Para quem não está familiarizado, o aplicativo é descrito como uma solução que gerencia os serviços de forma eficiente e sem complicações, eliminando preocupações como cobranças e atrasos. </p>
-                        </div>
-                        <div class="tecnologias"> 
-                            <h3>Tecnologias: </h3>
-                            <ul>
-                                <li><i class="fab fa-java"></i><span class="tooltip">Java</span></li>
-                                <li><i class="fa-solid fa-database"></i><span class="tooltip">SQL</span></li>
-                            </ul>
-                        </div>
-                        <div class="resumo-imagem"> <h3>Resumo da imagem: </h3></div>
-                    </div>
-                `;
-            }
-            return html;
-        }
-
-        prevButton.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                projectCards[currentIndex].classList.remove('current');
-                projectCards[currentIndex].classList.add('next');
-                projectCards[currentIndex - 1].classList.remove('previous');
-                projectCards[currentIndex - 1].classList.add('current');
-
-                var string_id = projectCards[currentIndex - 1].id;
-                var html = returnHtml(string_id); // Pass string_id instead of id
-                var projetoSelecionado = document.getElementById('projeto-resumo');
-                projetoSelecionado.classList.add('hidden');
-                projetoSelecionado.innerHTML = html;
-                setTimeout(function () {
-                    projetoSelecionado.classList.remove('hidden');
-                    projetoSelecionado.classList.add('show');
-                }, 500);
-                projetoSelecionado.classList.remove('show');
-
-                currentIndex--;
-            }
-        });
-
-        nextButton.addEventListener('click', () => {
-            if (currentIndex < projectCards.length - 1) {
-                projectCards[currentIndex].classList.remove('current');
-                projectCards[currentIndex].classList.add('previous');
-                projectCards[currentIndex + 1].classList.remove('next');
-                projectCards[currentIndex + 1].classList.add('current');
-
-                var string_id = projectCards[currentIndex + 1].id
-                var html = returnHtml(string_id);
-                var projetoSelecionado = document.getElementById('projeto-resumo');
-                projetoSelecionado.classList.add('hidden');
-                projetoSelecionado.innerHTML = html;
-                setTimeout(function () {
-                    projetoSelecionado.classList.remove('hidden');
-                    projetoSelecionado.classList.add('show');
-                }, 500); 
-                projetoSelecionado.classList.remove('show');
-                
-                currentIndex++;
-            }
-        });
-
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                // Obtém o destino do link
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-
-                // Rola a página até o elemento de destino
-                targetElement.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-    </script>
-    <style>
-body {
-    --cor-fundo: #333; /* Cor de fundo para tema escuro */
-    --cor-texto: #f5f5f5; /* Cor do texto para tema escuro */
-}
-
-body.light-mode {
-    --cor-fundo: #f5f5f5; /* Cor de fundo para tema claro */
-    --cor-texto: #333; /* Cor do texto para tema claro */
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-    transition: 0.5s;
-    background-color: var(--cor-fundo);
-}
-
-#btn-top {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    transition: 0.5s;
-}
-
-#btn-bottom {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    transition: 0.5s;
-}
-
-
-.home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-h1,
-h2,
-h3 {
-    color: var(--cor-texto);
-}
-
-p {
-    color: var(--cor-texto);
-}
-
-
-/* nav bar */
-
-.navbar-container {
-    width: 95%;
-    height: 80px;
-    background-color: transparent;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-}
-
-.div-nav {
-    display: flex;
-    justify-content: space-between;
-}
-
-.icon-theme{
-    height: 80px;
-    font-size: 20px;
-    line-height: 80px;
-}
-
-
-#theme-icon {
-    color: var(--cor-texto);
-}
-
-.navbar-itens {
-    height: 80px;
-    line-height: 80px;
-    display: inline-block;
-}
-
-.navbar-itens li {
-    display: inline-block;
-    margin-left: 25px;
-}
-
-.navbar-itens a {
-    color: var(--cor-texto);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.navbar-itens a:hover {
-    color: #ccc;
-}
-
-
-
-.main-banner {
-    width: 95%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-}
-
-.main-banner h1,
-.main-banner p {
-    margin-bottom: 8px; /* Define a margem inferior de 10 pixels para os elementos h2, h1 e p dentro da div */
-}
-
-.main-banner p {
-    width: 50%;
-    color: var(--cor-texto);
-    line-height: 1.8;
-}
-
-.icons-sociais {/* Vertically center the icons */
-    margin-top: 10px;
-}
-
-.icons-sociais li {
-    display: inline-block;
-    margin-top: 10px;   
-}
-
-.icons-sociais a {
-    font-size: 25px;
-    color: var(--cor-texto);
-}
-
-.icons-sociais a:hover {
-    color: #70747a;
-}
-
-.whats,
-.git {
-    margin-left: 20px;
-}
-
-button {    
-    background-color: var(--cor-fundo); /* Green */
-    border: 2px solid var(--cor-texto);
-    color: var(--cor-texto);
-    padding: 10px 25px;
-    margin-top: 7px;
-    border-radius: 10px;
-    font-size: 15px;
-}
-
-.button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-}
-
-.button span:after {
-    content: '\21D3';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-}
-
-.button:hover span {
-    padding-right: 25px;
-}
-
-.button:hover span:after {
-    opacity: 1;
-    right: 0;
-}
-
-.divider {
-    display: flex;
-    justify-content: center;
-}
-
-.barra-divider {
-    width: 95%;
-    height: 1px;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    background-color: var(--cor-texto); /* Cor da linha */
-}
-
-.habilidades {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.habilidades li {
-    display: inline-block;
-    color: var(--cor-texto);
-    margin-left: 25px;
-    margin-right: 25px;
-    font-size: 70px;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-.habilidades ul {
-    margin-top: 40px;
-}
-
-.habilidades li:hover .tooltip{
-    display: block;
-    font-size: 20px;
-}
-
-.tooltip {
-    display: none;
-    position: fixed;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--cor-texto);
-    color: var(--cor-fundo);
-    padding: 5px;
-    border-radius: 3px;
-    white-space: nowrap;
-}
-
-.projetos {
-}
-
-.projetos h2 {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 80px;
-}
-
-.projects-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    max-width: 10000px; /* Ajuste conforme necessário */
-    margin: 0 auto;
-}
-
-.project-card {
-    width: 300px; /* Ajuste conforme necessário */
-    height: 200px; /* Ajuste conforme necessário */
-    background-color: var(--cor-fundo); /* Cor de fundo dos cards */
-    transform-style: preserve-3d;
-    border-radius: 2px;
-    transition: transform 0.5s ease;
-}
-
-.project-card img {
-    position: absolute;
-    width: 300px;
-    height: 200px;
-    border: var(--cor-texto) solid 1px;
-}
-
-.project-card p {
-    position: absolute;
-    width: 100%;
-    background-color: var(--cor-fundo);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    border: var(--cor-texto) solid 0.5px;
-}
-
-.project-card p {
-    text-align: center;
-}
-
-.previous {
-    transform: perspective(1000px) rotateY(-20deg);
-}
-
-.previous:hover {
-    transform: perspective(1000px) rotateY(0deg);
-}
-
-.current {
-    transform: perspective(1000px) scale(1.2);
-}
-
-.next {
-    transform: perspective(1000px) rotateY(20deg);
-}
-
-.next:hover {
-    transform: perspective(1000px) rotateY(0deg);
-}
-
-.navigation {
-    position: fixed;
-    top: 50%;
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    background-color: transparent;
-}
-
-.notanimate-resumo {
-    height: 700px;
-    margin-top: 120px;
-}
-
-.resumo-projeto {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    height: 100%;
-    margin-left: 5%;
-    margin-right: 5%;
-    transition: all 0.5s ease;
-    overflow: hidden;
-}
-
-.resumo-projeto.hidden {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    height: 100%;
-    margin-left: 5%;
-    margin-right: 5%;
-    transition: none;
-    opacity: 0;
-}
-
-
-.resumo-projeto.show {
-    position: absolute;
-    transition: all 0.5s ease;
-    transform: translateY(100%); /* Move a div para fora da tela no topo */
-    height: 700px;
-    animation: slideInTop 0.3s forwards;
-}
-
-@keyframes slideInTop {
-    0% {
-        transform: translateY(100%); /* Começa fora da tela no topo */
-        opacity: 0; /* Começa invisível */
-    }
-    100% {
-        transform: translateY(0); /* Move para a posição inicial */
-        opacity: 1; /* Torna visível */
-    }
-}
-
-
-.resumo-projeto li {
-    display: inline-block;
-}
-
-.container-images {
-    display: flex;
-    width: 40%;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.images-projeto {
-    text-align: center;
-    
-}
-
-.carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; /* Suporte para scroll suave no iOS */
-}
-
-.carousel img {
-    scroll-snap-align: start;
-    flex: 0 0 auto;
-    width: 100%;
-    height: auto;
-}
-
-.resumo {
-    width: 60%;
-    margin-left: 35px;
-}
-
-.resumo div {
-    width: 100%;
-}
-
-.resumo li {
-    font-size: 50px;
-    color: var(--cor-texto);
-    margin-left: 50px;
-    display: inline-block;
-
-}
-
-.resumo li:hover .tooltip {
-    display: block;
-    font-size: 20px;
-}
-
-.resumo p {
-    margin-top: 1%;
-    height: 100%;
-    width: 100%;
-    line-height: 1.8;
-    text-align: center  ;
-}
-
-.tooltip {
-    display: none;
-    position: fixed;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--cor-texto);
-    color: var(--cor-fundo);
-    padding: 5px;
-    border-radius: 3px;
-    white-space: nowrap;
-}
-
-.h1-projeto {
-    height: 70%;
-}
-
-.tecnologias {
-    height: 15%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.tecnologias ul {
-    display: inline-block;
-    margin-right: 5%;
-}
-
-
-.resumo-imagem {
-    height: 15%;
-}
-
-.sobre-mim {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
-}
-
-.sobre-mim p {
-    text-align: center;
-    margin-top: 10px;
-    line-height: 1.8;
-    color: var(--cor-texto);
-}
-
-::-webkit-scrollbar {
-    width: 5px; /* Largura da barra de rolagem */
-}
-
-/* Estilizando a área de fundo da barra de rolagem */
-::-webkit-scrollbar-track {
-    background-color: var(--cor-fundo); /* Cor de fundo da barra de rolagem */
-}
-
-/* Estilizando a alça da barra de rolagem */
-::-webkit-scrollbar-thumb {
-    background-color: var(--cor-texto); /* Cor da alça da barra de rolagem */
-}
-
-/* Estilizando as esquinas da barra de rolagem */
-::-webkit-scrollbar-corner {
-    background-color: var(--cor-fundo); /* Cor de fundo das esquinas da barra de rolagem */
-}
-
-
-    </style>
+    <script src="script/script.js"></script>
 </body>
 </html>
