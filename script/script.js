@@ -71,7 +71,7 @@ function scrollToBottom() {
 const buttonMeuNegocio = document.getElementById('app-meu-negocio');
 const buttonLab2 = document.getElementById('app-lab-2');
 const buttonBI = document.getElementById('relatorio-bi');
-
+const divProjeto = document.getElementById('descricao-projetos-container');
 const projectCards2 = document.querySelectorAll('.project-card');
 
 buttonBI.addEventListener('click', () => {
@@ -84,6 +84,24 @@ buttonBI.addEventListener('click', () => {
             card.classList.add('current');
         }
     });
+    divProjeto.innerHTML = `
+    <div class="descricao-projetos">
+    <div class="image-projeto">
+        <img src="img/bi/image_bi_1.png" alt='Demonstração da tela de login do projeto "Meu negocio" '>
+    </div>
+    <div class="descricao-projeto">
+        <h3>Descrição do projeto</h3>
+        <p> O projeto "Meu Negócio" foi concebido como um aplicativo de suporte para microempresas de serviços. Ele permite o registro e controle de agendamentos, clientes e horários, além de oferecer um resumo mensal financeiro. O aplicativo também possibilita o cadastro de serviços e clientes para vinculação a agendamentos e disponibiliza mensagens pré-definidas para comunicação ágil com os clientes, entre outros recursos. Para sua criação, foram utilizadas as tecnologias Firebase, Java e SQL. O principal desafio foi garantir uma experiência livre de problemas para os usuários no dia a dia, priorizando configurações flexíveis e a agilidade na inserção e coleta de dados. Embora ainda não tenha sido lançado publicamente, o aplicativo destaca-se pela sua usabilidade, permitindo o registro de fotos no atendimento, forma de pagamento e status de pagamento do cliente, com foco na eliminação de falhas e na inclusão de todos os registros relacionados à venda de serviços. Para quem não está familiarizado, o aplicativo é descrito como uma solução que gerencia os serviços de forma eficiente e sem complicações, eliminando preocupações como cobranças e atrasos. </p>
+    </div>
+    <div class="tecnologias-projeto">
+        <h3>Tecnologias:</h3>
+        <ul>
+            <li><i class="fab fa-java"></i><span class="tooltip">Java</span></li>
+            <li><i class="fa-solid fa-database"></i><span class="tooltip">SQL</span></li>
+        </ul>
+    </div>
+</div>
+    `
 });
 
 buttonLab2.addEventListener('click', () => {
@@ -96,6 +114,26 @@ buttonLab2.addEventListener('click', () => {
             card.classList.add('current');
         }
     });
+
+    divProjeto.innerHTML = `
+    <div class="descricao-projetos">
+    <div class="image-projeto">
+        <img src="img/lab2/image_lab2.png" alt='Demonstração da tela de login do projeto "Meu negocio" '>
+    </div>
+    <div class="descricao-projeto">
+        <h3>Descrição do projeto</h3>
+        <p> O projeto "Meu Negócio" foi concebido como um aplicativo de suporte para microempresas de serviços. Ele permite o registro e controle de agendamentos, clientes e horários, além de oferecer um resumo mensal financeiro. O aplicativo também possibilita o cadastro de serviços e clientes para vinculação a agendamentos e disponibiliza mensagens pré-definidas para comunicação ágil com os clientes, entre outros recursos. Para sua criação, foram utilizadas as tecnologias Firebase, Java e SQL. O principal desafio foi garantir uma experiência livre de problemas para os usuários no dia a dia, priorizando configurações flexíveis e a agilidade na inserção e coleta de dados. Embora ainda não tenha sido lançado publicamente, o aplicativo destaca-se pela sua usabilidade, permitindo o registro de fotos no atendimento, forma de pagamento e status de pagamento do cliente, com foco na eliminação de falhas e na inclusão de todos os registros relacionados à venda de serviços. Para quem não está familiarizado, o aplicativo é descrito como uma solução que gerencia os serviços de forma eficiente e sem complicações, eliminando preocupações como cobranças e atrasos. </p>
+    </div>
+    <div class="tecnologias-projeto">
+        <h3>Tecnologias:</h3>
+        <ul>
+            <li><i class="fab fa-java"></i><span class="tooltip">Java</span></li>
+            <li><i class="fa-solid fa-database"></i><span class="tooltip">SQL</span></li>
+        </ul>
+    </div>
+</div>
+    `
+
 });
 
 buttonMeuNegocio.addEventListener('click', () => {
@@ -111,6 +149,26 @@ buttonMeuNegocio.addEventListener('click', () => {
             card.classList.add('current');
         }
     });
+
+    divProjeto.innerHTML = `
+    <div class="descricao-projetos">
+    <div class="image-projeto">
+        <img src="img/meu-negocio/negocio-1.jpg" alt='Demonstração da tela de login do projeto "Meu negocio" '>
+    </div>
+    <div class="descricao-projeto">
+        <h3>Descrição do projeto</h3>
+        <p> O projeto "Meu Negócio" foi concebido como um aplicativo de suporte para microempresas de serviços. Ele permite o registro e controle de agendamentos, clientes e horários, além de oferecer um resumo mensal financeiro. O aplicativo também possibilita o cadastro de serviços e clientes para vinculação a agendamentos e disponibiliza mensagens pré-definidas para comunicação ágil com os clientes, entre outros recursos. Para sua criação, foram utilizadas as tecnologias Firebase, Java e SQL. O principal desafio foi garantir uma experiência livre de problemas para os usuários no dia a dia, priorizando configurações flexíveis e a agilidade na inserção e coleta de dados. Embora ainda não tenha sido lançado publicamente, o aplicativo destaca-se pela sua usabilidade, permitindo o registro de fotos no atendimento, forma de pagamento e status de pagamento do cliente, com foco na eliminação de falhas e na inclusão de todos os registros relacionados à venda de serviços. Para quem não está familiarizado, o aplicativo é descrito como uma solução que gerencia os serviços de forma eficiente e sem complicações, eliminando preocupações como cobranças e atrasos. </p>
+    </div>
+    <div class="tecnologias-projeto">
+        <h3>Tecnologias:</h3>
+        <ul>
+            <li><i class="fab fa-java"></i><span class="tooltip">Java</span></li>
+            <li><i class="fa-solid fa-database"></i><span class="tooltip">SQL</span></li>
+        </ul>
+    </div>
+</div>
+    `
+
 });
 
 
