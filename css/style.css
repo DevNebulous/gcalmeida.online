@@ -114,10 +114,12 @@ p {
     height: 90%;
     margin-top: 10%;
     margin-bottom: 10%;
+    background-color: transparent;
 }
 
 .svg {
     height: 80%;    
+    background-color: transparent;
 }
 
 .superior-main {
