@@ -18,29 +18,26 @@ const themeIcon = document.getElementById('theme-icon');
 const animateRobo = document.getElementById('svg-container');
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('light-mode');
-
-    const darkMode = `
-    <div class="svg">
-        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-        <dotlottie-player src="https://lottie.host/70ee8435-d320-411e-83d9-bad7e552a75d/Ca1jjw6NpR.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></dotlottie-player>
-    </div>
-  `;
-
-    const lightMode = `
-    <div class="svg">
-        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-        <dotlottie-player src="https://lottie.host/22889ef5-46f7-478c-b14c-f7f5d71793a4/TjM7XzdGmW.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
-    </div>
-    `;
-
     if (document.body.classList.contains('light-mode')) {
+        animateRobo.innerHTML = `
+        <div class="svg">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+            <dotlottie-player src="https://lottie.host/70ee8435-d320-411e-83d9-bad7e552a75d/Ca1jjw6NpR.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></dotlottie-player>
+        </div>
+      `;
         themeIcon.classList.remove('fa-moon');
         themeIcon.classList.add('fa-sun');
-        animateRobo.innerHTML = lightMode;
+        
     } else {
+        animateRobo.innerHTML = `
+        <div class="svg">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+            <dotlottie-player src="https://lottie.host/22889ef5-46f7-478c-b14c-f7f5d71793a4/TjM7XzdGmW.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></dotlottie-player>
+        </div>
+        `;
         themeIcon.classList.remove('fa-sun');
         themeIcon.classList.add('fa-moon');
-        animateRobo.innerHTML = darkMode;
+        
     }
 });
 
