@@ -1,12 +1,14 @@
 
 body {
     --cor-fundo: #333; /* Cor de fundo para tema escuro */
+    --cor-fundo2: #424040; /* Cor de fundo para tema escuro */
     --cor-texto: #f5f5f5; /* Cor do texto para tema escuro */
     
 }
 
 body.light-mode {
     --cor-fundo: #f5f5f5; /* Cor de fundo para tema claro */
+    --cor-fundo2: #ebe5e5; /* Cor de fundo para tema claro */
     --cor-texto: #333; /* Cor do texto para tema claro */
 }
 
@@ -437,6 +439,29 @@ button {
 .sobre-mim p {
     text-align: center;
     line-height: 2;
+}
+
+.contato-container {
+
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    height: auto;
+}
+
+.contato {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 50px;
+    border: 1px var(--cor-texto) solid;
+    background-color: var(--cor-fundo2);   
+    border-radius: 10px;
+}
+
+.contato h2 {
+    background-color: transparent;
+    text-align: center;
 }
 
 ::-webkit-scrollbar {
