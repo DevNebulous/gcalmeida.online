@@ -91,12 +91,12 @@ buttonBI.addEventListener('click', () => {
     </div>
     <div class="descricao-projeto">
         <h3>Descrição do projeto</h3>
-        <p> O projeto "Meu Negócio" foi concebido como um aplicativo de suporte para microempresas de serviços. Ele permite o registro e controle de agendamentos, clientes e horários, além de oferecer um resumo mensal financeiro. O aplicativo também possibilita o cadastro de serviços e clientes para vinculação a agendamentos e disponibiliza mensagens pré-definidas para comunicação ágil com os clientes, entre outros recursos. Para sua criação, foram utilizadas as tecnologias Firebase, Java e SQL. O principal desafio foi garantir uma experiência livre de problemas para os usuários no dia a dia, priorizando configurações flexíveis e a agilidade na inserção e coleta de dados. Embora ainda não tenha sido lançado publicamente, o aplicativo destaca-se pela sua usabilidade, permitindo o registro de fotos no atendimento, forma de pagamento e status de pagamento do cliente, com foco na eliminação de falhas e na inclusão de todos os registros relacionados à venda de serviços. Para quem não está familiarizado, o aplicativo é descrito como uma solução que gerencia os serviços de forma eficiente e sem complicações, eliminando preocupações como cobranças e atrasos. </p>
+        <p> O projeto "Relatório da Pesquisa de Satisfação" foi iniciado para atender à necessidade de uma empresa em aprimorar suas interações com os clientes. O foco do projeto foi a análise detalhada dos dados para identificar os principais pontos de falha da empresa, bem como as áreas de maior e menor satisfação do cliente. Além disso, o projeto calcula o NPS (Net Promoter Score), um indicador padronizado que mede a satisfação dos clientes com o atendimento. Embora não sejam tecnologias específicas, o projeto envolveu o desenvolvimento da estrutura do relatório, utilizando SQL e DAX. Um dos desafios foi estabelecer as relações entre as tabelas de dados e determinar quais indicadores seriam mais eficazes para o cliente. O projeto foi muito bem recebido dentro da empresa do cliente, desde os técnicos até a gerência e as áreas de metas.</p>
     </div>
     <div class="tecnologias-projeto">
         <h3>Tecnologias:</h3>
         <ul>
-            <li><i class="fab fa-java"></i><span class="tooltip">Java</span></li>
+            <li>DAX<span class="tooltip">Data Analysis Expressions</span></li>
             <li><i class="fa-solid fa-database"></i><span class="tooltip">SQL</span></li>
         </ul>
     </div>
@@ -122,7 +122,7 @@ buttonLab2.addEventListener('click', () => {
     </div>
     <div class="descricao-projeto">
         <h3>Descrição do projeto</h3>
-        <p> O projeto "Meu Negócio" foi concebido como um aplicativo de suporte para microempresas de serviços. Ele permite o registro e controle de agendamentos, clientes e horários, além de oferecer um resumo mensal financeiro. O aplicativo também possibilita o cadastro de serviços e clientes para vinculação a agendamentos e disponibiliza mensagens pré-definidas para comunicação ágil com os clientes, entre outros recursos. Para sua criação, foram utilizadas as tecnologias Firebase, Java e SQL. O principal desafio foi garantir uma experiência livre de problemas para os usuários no dia a dia, priorizando configurações flexíveis e a agilidade na inserção e coleta de dados. Embora ainda não tenha sido lançado publicamente, o aplicativo destaca-se pela sua usabilidade, permitindo o registro de fotos no atendimento, forma de pagamento e status de pagamento do cliente, com foco na eliminação de falhas e na inclusão de todos os registros relacionados à venda de serviços. Para quem não está familiarizado, o aplicativo é descrito como uma solução que gerencia os serviços de forma eficiente e sem complicações, eliminando preocupações como cobranças e atrasos. </p>
+        <p> O Lab2 é um aplicativo móvel dedicado a tablets, desenvolvido para uma empresa com o objetivo de otimizar os processos laboratoriais. No ambiente da empresa, os técnicos recebem amostras e realizam ensaios nelas. O aplicativo se integra ao sistema principal do cliente por meio de uma API, permitindo que os tablets acessem as amostras a serem testadas, exibam os ensaios aos técnicos e retornem os resultados dos ensaios, eliminando a necessidade de fichários em papel. O Lab2 foi desenvolvido utilizando Google Firebase, Java e SQL para criar um aplicativo nativo. O principal desafio foi garantir que o aplicativo fosse totalmente dinâmico e, ao mesmo tempo, atendesse aos requisitos do cliente. O     Lab2 foi bem recebido pelo laboratório do cliente e continua sendo utilizado até hoje. O aplicativo é elogiado por sua total dinamicidade e intuitividade, facilitando e agilizando um dos processos essenciais para o cliente. </p>
     </div>
     <div class="tecnologias-projeto">
         <h3>Tecnologias:</h3>
@@ -166,6 +166,11 @@ buttonMeuNegocio.addEventListener('click', () => {
             <li><i class="fa-solid fa-database"></i><span class="tooltip">SQL</span></li>
         </ul>
     </div>
+    <div class="button-download">
+    <a href="down/Meu Negocio.apk" download="Meu Negocio.apk">
+        <button>Baixar APK</button>
+    </a>
+</div>
 </div>
     `
 
