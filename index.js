@@ -5,10 +5,10 @@ const app = express();
 const PORT = 3000;
 
 // Define o prefixo '/portfolio' para arquivos estáticos
-app.use('/portfolio', express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(path.join(__dirname, 'public')));
 
 // Rota para a página inicial
-app.get('/portfolio', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
